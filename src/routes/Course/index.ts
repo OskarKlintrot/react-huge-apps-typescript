@@ -4,16 +4,16 @@ export default {
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./routes/Announcements'),
-        require('./routes/Assignments'),
-        require('./routes/Grades')
+        require('./routes/Announcements').default,
+        require('./routes/Assignments').default,
+        require('./routes/Grades').default
       ])
     })
   },
 
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
-      cb(null, require('./components/Course'))
+      cb(null, require('./components/Course').default)
     })
   }
 }

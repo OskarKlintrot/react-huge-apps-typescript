@@ -4,7 +4,7 @@ export default {
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./routes/Assignment')
+        require('./routes/Assignment').default
       ])
     })
   },
@@ -12,8 +12,8 @@ export default {
   getComponents(nextState, cb) {
     require.ensure([], (require) => {
       cb(null, {
-        sidebar: require('./components/Sidebar'),
-        main: require('./components/Assignments')
+        sidebar: require('./components/Sidebar').default,
+        main: require('./components/Assignments').default
       })
     })
   }

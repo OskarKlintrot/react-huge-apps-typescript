@@ -7,5 +7,5 @@ declare namespace NodeJS {
 }
 
 interface NodeRequire {
-  ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
+  ensure: (paths: string[], callback: (require: NodeRequireFunction) => void) => void;
 }
