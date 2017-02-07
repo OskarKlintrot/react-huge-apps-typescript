@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+	"compilerOptions": {
+    "outDir": "dist",
+		"target": "es2015",
+    "moduleResolution": "node",
+		"jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}
