@@ -1,3 +1,5 @@
+/// <reference path="../node_modules/@types/node/index.d.ts" />
+
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, browserHistory } from 'react-router'
@@ -8,7 +10,7 @@ import './stubs/COURSES'
 const rootRoute = {
   childRoutes: [ {
     path: '/',
-    component: require('./components/App'),
+    component: require('./components/App').default,
     childRoutes: [
       require('./routes/Calendar'),
       require('./routes/Course'),
